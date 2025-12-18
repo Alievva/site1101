@@ -1,5 +1,8 @@
+---
 title: Contact
+layout: default
 permalink: /contact/
+---
 
 Provide contact methods: email, LinkedIn, Twitter, or contact form instructions.
 
@@ -29,3 +32,4 @@ Provide contact methods: email, LinkedIn, Twitter, or contact form instructions.
 	</ul>
 
 </section>
+

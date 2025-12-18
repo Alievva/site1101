@@ -12,7 +12,11 @@ permalink: /
 	<div class="hero-left">
 		<h1 class="hero-name">Aytaj Aliyeva</h1>
 		<p class="hero-desc">Computer Science student with interests in programming, design, and creative problem-solving.</p>
-		<p><a class="btn" href="{{ "/projects/" | relative_url }}">View Projects</a></p>
+		<p class="btn-group">
+			<a class="btn" href="{{ "/about/" | relative_url }}">View About Me</a>
+			<a class="btn" href="{{ "/projects/" | relative_url }}">View Projects</a>
+			<a class="btn" href="{{ "/achievements/" | relative_url }}">View Achievements</a>
+		</p>
 	</div>
 	<div class="hero-right">
 		<img class="profile-img" src="{{ "/assets/images/profile.PNG" | relative_url }}" alt="Aytaj Aliyeva profile photo">

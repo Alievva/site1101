@@ -78,8 +78,16 @@ h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text);margin:0 0 .5rem}
 [data-theme="dark"] .theme-toggle .icon-moon{display:inline}
 
 /* Buttons and links */
-.btn{display:inline-block;padding:.5rem .75rem;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#07211a;text-decoration:none;border:0;transition:transform var(--ease-fast) ease, box-shadow var(--ease-fast) ease}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:var(--text);text-decoration:none;border:0;transition:transform var(--ease-fast) ease, box-shadow var(--ease-fast) ease}
 .btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(10,10,10,0.06)}
+
+.btn-group{display:flex;gap:.6rem;flex-wrap:wrap}
+.btn-group .btn{flex:0 0 auto}
+
+@media (max-width:480px){
+	.btn-group{justify-content:center}
+	.btn{width:100%;text-align:center}
+}
 
 /* Main content */
 .site-content{padding:2rem 1rem;background:transparent}
