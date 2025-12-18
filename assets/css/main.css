@@ -1,28 +1,61 @@
-/* Pastel green & yellow soft theme with light/dark modes */
+/* Pastel theme: fonts, variables, transitions, and responsive helpers */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap');
+
 :root{
-	--bg: #f7fdf7; /* very light green */
+	/* Main colors */
+	--color-green: #A8E6CF; /* pastel green */
+	--color-yellow: #FFF9A8; /* pastel yellow */
+
+	/* Supporting colors */
+	--soft-cream: #FFFCE6;
+	--muted-olive: #8AA17A;
+	--soft-gray: #E6E9EE;
+
+	/* UI tokens */
+	--bg: var(--soft-cream);
 	--surface: #ffffff;
-	--text: #0f172a; /* dark slate */
+	--text: #0f172a;
 	--muted: #6b7280;
-	--accent: #9ae6b4; /* pastel green */
-	--accent-2: #fff9c4; /* pastel yellow */
+	--accent: var(--color-green);
+	--accent-2: var(--color-yellow);
 	--border: rgba(15,23,42,0.06);
+
+	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	--font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+	--radius-md: 8px;
+	--ease-fast: 150ms;
+	--ease-smooth: 240ms;
 }
 
 [data-theme="dark"]{
-	--bg: #0b1220;
-	--surface: #071023;
+	--color-green: #5FAE86; /* darker green */
+	--color-yellow: #E6D843; /* darker yellow */
+	--soft-cream: #0b1220;
+	--muted-olive: #6f8a62;
+	--soft-gray: #0e1622;
+
+	--bg: #071023;
+	--surface: #0b1220;
 	--text: #e6eef6;
 	--muted: #9aa7b6;
-	--accent: #2f855a;
-	--accent-2: #f6e05e;
+	--accent: var(--color-green);
+	--accent-2: var(--color-yellow);
 	--border: rgba(230,238,246,0.06);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce){
+	:root{--ease-fast:0ms;--ease-smooth:0ms}
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--bg);margin:0;line-height:1.6}
+body{font-family:var(--font-sans);color:var(--text);background:var(--bg);margin:0;line-height:1.6;-webkit-font-smoothing:antialiased}
 .container{max-width:1000px;margin:0 auto;padding:1rem}
+
+/* Headings use serif for a modern elegant look */
+h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text);margin:0 0 .5rem}
 
 /* Header */
 .site-header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:40}
@@ -33,27 +66,37 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
 .menu-toggle{background:transparent;border:0;padding:.25rem;display:none}
 
 .site-nav{display:flex;gap:1rem;align-items:center}
-.site-nav a{color:var(--muted);text-decoration:none;padding:.5rem;border-radius:6px}
-.site-nav a:hover{color:var(--text);background:linear-gradient(90deg, var(--accent-2), rgba(0,0,0,0))}
+.site-nav a{color:var(--muted);text-decoration:none;padding:.5rem;border-radius:var(--radius-md);transition:color var(--ease-fast) ease, background var(--ease-fast) ease, transform var(--ease-fast) ease}
+.site-nav a:hover{color:var(--text);background:linear-gradient(90deg, var(--accent-2), rgba(0,0,0,0));transform:translateY(-2px)}
+.site-nav a:active{transform:translateY(0)}
 
 .header-controls{margin-left:auto;display:flex;align-items:center}
-.theme-toggle{background:transparent;border:1px solid var(--border);padding:.35rem;border-radius:8px;display:inline-flex;gap:.4rem;align-items:center;color:var(--muted)}
+.theme-toggle{background:transparent;border:1px solid var(--border);padding:.35rem;border-radius:10px;display:inline-flex;gap:.4rem;align-items:center;color:var(--muted);cursor:pointer;transition:background var(--ease-fast) ease, color var(--ease-fast) ease}
+.theme-toggle:hover{background:var(--soft-gray);color:var(--text)}
 .theme-toggle .icon-moon{display:none}
 [data-theme="dark"] .theme-toggle .icon-sun{display:none}
 [data-theme="dark"] .theme-toggle .icon-moon{display:inline}
 
+/* Buttons and links */
+.btn{display:inline-block;padding:.5rem .75rem;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#07211a;text-decoration:none;border:0;transition:transform var(--ease-fast) ease, box-shadow var(--ease-fast) ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(10,10,10,0.06)}
+
 /* Main content */
 .site-content{padding:2rem 1rem;background:transparent}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);padding:1rem;border-radius:12px;transition:transform var(--ease-smooth) ease, box-shadow var(--ease-smooth) ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(15,23,42,0.06)}
 
 /* Footer */
 .site-footer{border-top:1px solid var(--border);padding:.75rem 0;color:var(--muted);background:var(--surface)}
 .footer-inner{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
 .footer-left{flex:1}
 .footer-center{display:flex;gap:.5rem;align-items:center}
-.footer-center .social{color:var(--muted);display:inline-flex;padding:.25rem;border-radius:6px}
-.footer-center .social:hover{color:var(--text)}
+.footer-center .social{color:var(--muted);display:inline-flex;padding:.25rem;border-radius:6px;transition:color var(--ease-fast) ease, transform var(--ease-fast) ease}
+.footer-center .social:hover{color:var(--text);transform:translateY(-2px)}
 .footer-right{margin-left:auto}
-.repo-link{color:var(--muted);text-decoration:none}
+.repo-link{color:var(--muted);text-decoration:none;transition:color var(--ease-fast) ease}
 .repo-link:hover{color:var(--text)}
 
 /* Responsive */
@@ -66,4 +109,5 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
 }
 
 /* Small helpers */
-.container a{transition:color .15s ease, background .15s ease}
+.container a{transition:color var(--ease-fast) ease, background var(--ease-fast) ease}
+
