@@ -111,3 +111,17 @@ h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text);margin:0 0 .5rem}
 /* Small helpers */
 .container a{transition:color var(--ease-fast) ease, background var(--ease-fast) ease}
 
+/* Hero / Home page */
+.hero{display:flex;gap:2rem;align-items:center;padding:2rem 0}
+.hero-left{flex:1}
+.hero-right{flex:0 0 220px;display:flex;justify-content:center}
+.profile-img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid var(--accent);box-shadow:0 10px 30px rgba(10,10,10,0.06);background:var(--soft-cream)}
+.hero-name{font-size:1.75rem;margin:0 0 .5rem}
+.hero-desc{color:var(--muted);margin:0 0 1rem}
+
+@media (max-width:800px){
+	.hero{flex-direction:column;text-align:center}
+	.hero-right{order:-1}
+	.profile-img{width:140px;height:140px}
+}
+
