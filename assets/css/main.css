@@ -111,6 +111,43 @@ h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text);margin:0 0 .5rem}
 /* Small helpers */
 .container a{transition:color var(--ease-fast) ease, background var(--ease-fast) ease}
 
+/* Mobile / small-screen adjustments */
+@media (max-width:800px){
+	/* Ensure the nav toggle is visible and nav becomes a stacked panel */
+	.menu-toggle{display:inline-flex}
+	.site-nav{position:absolute;top:64px;left:0;right:0;background:var(--surface);flex-direction:column;padding:0;display:none;border-bottom:1px solid var(--border);z-index:60}
+	.site-nav.show{display:flex}
+	.site-nav a{display:block;padding:0.95rem 1.25rem;border-bottom:1px solid var(--border);font-size:1rem}
+	.header-controls{position:absolute;right:1rem;top:.6rem}
+
+	/* Make header spacing comfortable on small widths */
+	.header-inner{padding:.5rem 1rem}
+}
+
+/* Make project grid stack if space is tight */
+@media (max-width:560px){
+	.projects-grid{grid-template-columns:1fr}
+	.project-card{min-height:auto}
+	.project-media{height:160px}
+}
+
+/* Improve touch targets and readability on very small screens */
+@media (max-width:480px){
+	html{font-size:15px}
+	.btn{padding:.7rem 1rem;font-size:1rem}
+	.view-cert, .project-links a{padding:.6rem .8rem}
+	.contact-item{padding:.6rem}
+	.site-nav a{font-size:1.02rem}
+	.profile-img{width:120px;height:120px}
+	.hero-name{font-size:1.4rem}
+}
+
+/* Extra small screens: reduce large shadows and spacing */
+@media (max-width:360px){
+	.card, .project-card{box-shadow:none}
+	.container{padding:.75rem}
+}
+
 /* Hero / Home page */
 .hero{display:flex;gap:2rem;align-items:center;padding:2rem 0}
 .hero-left{flex:1}
