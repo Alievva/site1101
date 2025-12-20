@@ -73,9 +73,10 @@ h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text);margin:0 0 .5rem}
 .header-controls{margin-left:auto;display:flex;align-items:center}
 .theme-toggle{background:transparent;border:1px solid var(--border);padding:.35rem;border-radius:10px;display:inline-flex;gap:.4rem;align-items:center;color:var(--muted);cursor:pointer;transition:background var(--ease-fast) ease, color var(--ease-fast) ease}
 .theme-toggle:hover{background:var(--soft-gray);color:var(--text)}
-.theme-toggle .icon-moon{display:none}
-[data-theme="dark"] .theme-toggle .icon-sun{display:none}
-[data-theme="dark"] .theme-toggle .icon-moon{display:inline}
+.theme-toggle .icon-sun{display:none}
+.theme-toggle .icon-moon{display:inline}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+[data-theme="dark"] .theme-toggle .icon-sun{display:inline}
 
 /* Buttons and links */
 .btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:var(--text);text-decoration:none;border:0;transition:transform var(--ease-fast) ease, box-shadow var(--ease-fast) ease}
@@ -157,23 +158,27 @@ h1,h2,h3,h4{font-family:var(--font-serif);color:var(--text);margin:0 0 .5rem}
 }
 
 /* Hero / Home page */
-.hero{display:flex;gap:2rem;align-items:center;padding:2rem 0}
-.hero-left{flex:1}
-.hero-right{flex:0 0 220px;display:flex;justify-content:center}
+.hero{display:flex;flex-direction:column;align-items:center;gap:1.25rem;padding:2.25rem 0;text-align:center}
+.hero-left{flex:0 0 auto;max-width:720px}
+.hero-right{flex:0 0 auto;display:flex;justify-content:center;order:-1}
 .profile-img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid var(--accent);box-shadow:0 10px 30px rgba(10,10,10,0.06);background:var(--soft-cream)}
 .hero-name{font-size:1.75rem;margin:0 0 .5rem}
 .hero-desc{color:var(--muted);margin:0 0 1rem}
 
-@media (max-width:800px){
-	.hero{flex-direction:column;text-align:center}
-	.hero-right{order:-1}
-	.profile-img{width:140px;height:140px}
+@media (min-width:900px){
+	/* On wide screens keep a compact centered hero but allow two-column if desired later */
+	.hero{padding:3rem 0}
+}
+
+@media (max-width:480px){
+	.profile-img{width:120px;height:120px}
+	.hero-name{font-size:1.35rem}
 }
 
 /* About page */
 .about-hero{display:flex;gap:2rem;align-items:flex-start;padding:2.5rem 0}
-.about-photo{flex:0 0 320px;max-width:100%;border-radius:14px;overflow:hidden;border:6px solid var(--accent);box-shadow:0 18px 40px rgba(10,10,10,0.06);background:linear-gradient(180deg, var(--accent-2), var(--soft-cream));}
-.about-photo img{display:block;width:100%;height:auto;object-fit:cover}
+.about-photo{flex:0 0 auto;width:320px;max-width:100%;aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:6px solid var(--accent);box-shadow:0 18px 40px rgba(10,10,10,0.06);background:linear-gradient(180deg, var(--accent-2), var(--soft-cream));}
+.about-photo img{display:block;width:100%;height:100%;object-fit:cover}
 .about-content{flex:1;min-width:0}
 .about-content h2{margin-top:0;font-size:1.5rem}
 .about-section{margin-bottom:1.25rem;padding:1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px}

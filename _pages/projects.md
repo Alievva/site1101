@@ -30,7 +30,7 @@ permalink: /projects/
 				<p class="project-desc">Organized and delivered an Hour of Code event introducing programming and algorithmic thinking.</p>
 
 				<div class="project-links">
-					<a href="#" aria-disabled="true">YouTube: Coming Soon</a>
+					<a href="https://youtu.be/R0LYru9TEJQ?si=r86GS6E3s5z32ulI" target="_blank" rel="noopener noreferrer">YouTube (Hour of Code)</a>
 					<a href="https://github.com/Alievva" target="_blank" rel="noopener noreferrer">View repository</a>
 				</div>
 			</div>
