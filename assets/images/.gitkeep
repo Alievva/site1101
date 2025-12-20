@@ -1,0 +1,15 @@
+<!-- Home page -->
+<img class="profile-img" src="{{ '/assets/images/profile.PNG' | relative_url }}" alt="Profile">
+
+<!-- Project images -->
+<img class="project-media" src="{{ '/assets/images/project1.jpg' | relative_url }}" alt="Project 1">
+<img class="project-media" src="{{ '/assets/images/project2.jpg' | relative_url }}" alt="Project 2">
+
+<!-- Achievements -->
+<img src="{{ '/assets/images/certificate_11th.jpg' | relative_url }}">
+<img src="{{ '/assets/images/certificate_rfo.jpg' | relative_url }}">
+<img src="{{ '/assets/images/certificate_fortepiano.jpg' | relative_url }}">
+<img src="{{ '/assets/images/certificate_visual_arts.jpg' | relative_url }}">
+
+<!-- About page photo -->
+<img src="{{ '/assets/images/about.jpg' | relative_url }}">
