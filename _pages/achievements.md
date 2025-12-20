@@ -45,12 +45,12 @@ permalink: /achievements/
 
 		<article class="achievement">
 			<div class="thumb">
-				<img src="{{ "/assets/images/certificate_11th.jpg" | relative_url }}" alt="11th Grade Graduation Certificate">
+				<img src="{{ "/assets/images/certificate_11th.JPG" | relative_url }}" alt="11th Grade Graduation Certificate">
 			</div>
 			<div class="meta">
 				<h3>🏅 11th Grade Graduation with Gold Distinction & Gold Medal</h3>
 				<p>Graduated 11th grade with Gold Distinction and received a gold medal for academic excellence.</p>
-				<p><a class="view-cert" href="{{ "/assets/images/certificate_11th.jpg" | relative_url }}" target="_blank" rel="noopener">View Certificate</a></p>
+				<p><a class="view-cert" href="{{ "/assets/images/certificate_11th.JPG" | relative_url }}" target="_blank" rel="noopener">View Certificate</a></p>
 			</div>
 		</article>
 

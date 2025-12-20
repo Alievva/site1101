@@ -20,6 +20,14 @@
       root.removeAttribute('data-theme');
       localStorage.setItem('theme','light');
     }
+    // Update toggle aria-label to indicate the action it will perform
+    if(toggle){
+      if(t === 'dark'){
+        toggle.setAttribute('aria-label','Switch to light theme');
+      } else {
+        toggle.setAttribute('aria-label','Switch to dark theme');
+      }
+    }
   }
 
   // Toggle theme on button click

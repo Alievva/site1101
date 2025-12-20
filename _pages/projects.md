@@ -11,7 +11,7 @@ permalink: /projects/
 		<article class="project-card">
 			<img class="project-media" src="{{ "/assets/images/project1.jpg" | relative_url }}" alt="Exploring Computer Hardware with Logic Gates">
 			<div class="project-body">
-				<h3 class="project-title">Exploring Computer Hardware with Logic Gates</h3>
+				<h3 class="project-title">How Does Hardware Work?</h3>
 				<p class="project-desc">A team project exploring computer hardware through logic gates by building, testing, and explaining their functions.</p>
 
 				<div class="project-links">
