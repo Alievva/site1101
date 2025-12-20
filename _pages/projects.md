@@ -18,7 +18,6 @@ permalink: /projects/
 					<a href="https://youtu.be/VgopWiqM-Ho" target="_blank" rel="noopener noreferrer">NOT • AND • OR (YouTube)</a>
 					<a href="https://youtu.be/sgNJwPErB7g" target="_blank" rel="noopener noreferrer">NAND (YouTube)</a>
 					<a href="https://youtu.be/U8RQGbiZfR4" target="_blank" rel="noopener noreferrer">XOR (YouTube)</a>
-					<a href="https://github.com/Alievva" target="_blank" rel="noopener noreferrer">View repository</a>
 				</div>
 			</div>
 		</article>
@@ -31,7 +30,6 @@ permalink: /projects/
 
 				<div class="project-links">
 					<a href="https://youtu.be/R0LYru9TEJQ?si=r86GS6E3s5z32ulI" target="_blank" rel="noopener noreferrer">YouTube (Hour of Code)</a>
-					<a href="https://github.com/Alievva" target="_blank" rel="noopener noreferrer">View repository</a>
 				</div>
 			</div>
 		</article>
